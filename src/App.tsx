@@ -4,6 +4,7 @@ import {Row, Col} from 'antd';
 import 'antd/dist/antd.css';
 import './assets/style/custom.scss';
 import Header from './component/header';
+import Map from './component/map';
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
       <div className="mainContent">
            <Row>
              <Col span={14}>list</Col>
-             <Col span={10}>map</Col> 
+             <Col span={10}>
+                <Map />  
+             </Col> 
            </Row>
       </div>
     </div>
