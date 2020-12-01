@@ -1,17 +1,17 @@
 import React from 'react';
-
+import { Input } from 'antd';
+import Logo from '../../assets/img/zotsuLogo.png';
+const { Search } = Input;
 const Header = () =>{
     return (
         <header className="headerMenu">
-                {/* <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                >
-                Learn React
-                </a> */}
-                <p>header</p>
+            <div className="imgWrap">
+                <img src={Logo} alt="logo"/>
+            </div>
+            {/* <p>header</p> */}
+            <div className="searchWrap">
+                    <Search placeholder="input search text" style={{ width: 200 }} />
+            </div>
         </header>
     )
 }

@@ -1,8 +1,4 @@
-
-
-
-
-.App {
+.Home{
     text-align: center;
     .mainContent{
       padding-top: 80px;
@@ -10,35 +6,31 @@
 
     .mapWrap{
       width: 100%;
-      height:100%;
+      height:100vh;
       min-height: 500px;
     }
       
       
   }
 .headerMenu{
-  height: 80px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
   position: fixed;
   left: 0px;
   width: 100%;
   z-index: 100;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 12px;
+  .imgWrap{
+    max-width: 102px;
+    img{
+      width: 100%;
+    }
+  }
+  .searchWrap{
+    width: 80%;
+  }
 }
   
-  // @media (prefers-reduced-motion: no-preference) {
-  //   .App-logo {
-  //     animation: App-logo-spin infinite 20s linear;
-  //   }
-  // }
-  
-  
-  // @keyframes App-logo-spin {
-  //   from {
-  //     transform: rotate(0deg);
-  //   }
-  //   to {
-  //     transform: rotate(360deg);
-  //   }
-  // }
   
