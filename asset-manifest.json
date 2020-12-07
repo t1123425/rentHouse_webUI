@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/rentHouse_webUI/static/css/main.ad6e5ec0.chunk.css",
+    "main.js": "/rentHouse_webUI/static/js/main.42b204e8.chunk.js",
+    "main.js.map": "/rentHouse_webUI/static/js/main.42b204e8.chunk.js.map",
+    "runtime-main.js": "/rentHouse_webUI/static/js/runtime-main.429a01f6.js",
+    "runtime-main.js.map": "/rentHouse_webUI/static/js/runtime-main.429a01f6.js.map",
+    "static/css/2.ea9b1cc9.chunk.css": "/rentHouse_webUI/static/css/2.ea9b1cc9.chunk.css",
+    "static/js/2.7875a842.chunk.js": "/rentHouse_webUI/static/js/2.7875a842.chunk.js",
+    "static/js/2.7875a842.chunk.js.map": "/rentHouse_webUI/static/js/2.7875a842.chunk.js.map",
+    "index.html": "/rentHouse_webUI/index.html",
+    "static/css/2.ea9b1cc9.chunk.css.map": "/rentHouse_webUI/static/css/2.ea9b1cc9.chunk.css.map",
+    "static/css/main.ad6e5ec0.chunk.css.map": "/rentHouse_webUI/static/css/main.ad6e5ec0.chunk.css.map",
+    "static/js/2.7875a842.chunk.js.LICENSE.txt": "/rentHouse_webUI/static/js/2.7875a842.chunk.js.LICENSE.txt",
+    "static/media/zotsuLogo.cc922b93.png": "/rentHouse_webUI/static/media/zotsuLogo.cc922b93.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.429a01f6.js",
+    "static/css/2.ea9b1cc9.chunk.css",
+    "static/js/2.7875a842.chunk.js",
+    "static/css/main.ad6e5ec0.chunk.css",
+    "static/js/main.42b204e8.chunk.js"
+  ]
+}
