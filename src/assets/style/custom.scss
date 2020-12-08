@@ -15,22 +15,31 @@
 .headerMenu{
   min-height: 80px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: absolute;
+  padding: 0 28px;
+  top:0;
   left: 0px;
   width: 100%;
   z-index: 100;
   background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 12px;
+  box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.1);
+  img{
+    width: 100%;
+  }
   .imgWrap{
-    max-width: 102px;
-    img{
-      width: 100%;
-    }
+    max-width: 48px;
   }
   .searchWrap{
     width: 80%;
   }
+  .avatarIcon{
+     width: 56px;
+  }
+}
+.filterContent{
+  text-align: left;
 }
   
   
