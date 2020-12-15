@@ -28,6 +28,53 @@ const districtList = (
       </Menu.Item>
     </Menu>
 )
+interface houseData {
+   price?:Number,
+   info?:String,
+   img:String
+}
+const mockHouseList:houseData[] = [
+  {
+    price:99999,
+    info:'迪化商圈歸綏街3+1房 (入籍.家具可談)',
+    img:''
+  },
+  {
+    price:99999,
+    info:'北車捷運京站地下街便利舒適電梯全新大套房',
+    img:''
+  },
+  {
+    price:99999,
+    info:'台北車站【五星飯店式】獨棟電梯~獨立套房',
+    img:''
+  },
+  {
+    price:99999,
+    info:'近台北車站捷運免費電視網路',
+    img:''
+  },
+  {
+    price:99999,
+    info:'近台北車站四房免費含電視網路家具家電冷氣',
+    img:''
+  },
+  {
+    price:99999,
+    info:'大橋頭超站捷運宅',
+    img:''
+  },
+  {
+    price:99999,
+    info:'近北車、捷運大空間質感溫馨2房',
+    img:''
+  },
+  {
+    price:99999,
+    info:'京站時尚廣場B6，24小時警衛，近火車站',
+    img:''
+  }
+]
 
 function Home() {
     // console.log(process.env.PUBLIC_URL);
@@ -68,62 +115,26 @@ function Home() {
                       共找到 678 間房屋
                     </h2>
                     <Row gutter={[16, 16]}>
-                      <Col span={8}>
-                         <a href="#" className="houseInfoBox">
-                           <div className="prevImg">
-                              <img src={HousePrev}  alt="prev"/>
-                           </div>
-                           <div className="houseInfo">
-                              <p>迪化商圈歸綏街3+1房 (入籍.家具可談)</p>
-                              <div className="priceBox">
-                                  <span>99,999</span>
-                                  <span>元/月</span>
+                      {
+                         mockHouseList.map((e)=>{
+                           return (
+                            <Col span={8}>
+                              <div className="houseInfoBox">
+                                <div className="prevImg">
+                                  <img src={HousePrev}  alt="prev"/>
+                                </div>
+                                <div className="houseInfo">
+                                  <p>{e.info}</p>
+                                  <div className="priceBox">
+                                      <span>{e.price}</span>
+                                      <span>元/月</span>
+                                  </div>
+                                </div>
                               </div>
-                           </div>
-                         </a>
-                      </Col>
-                      <Col span={8}>
-                         <a href="#" className="houseInfoBox">
-                           <div className="prevImg">
-                              <img src={HousePrev}  alt="prev"/>
-                           </div>
-                           <div className="houseInfo">
-                              <p>北車捷運京站地下街便利舒適電梯全新大套房</p>
-                              <div className="priceBox">
-                                  <span>99,999</span>
-                                  <span>元/月</span>
-                              </div>
-                           </div>
-                         </a>
-                      </Col>
-                      <Col span={8}>
-                         <a href="#" className="houseInfoBox">
-                           <div className="prevImg">
-                              <img src={HousePrev}  alt="prev"/>
-                           </div>
-                           <div className="houseInfo">
-                              <p>迪化商圈歸綏街3+1房 (入籍.家具可談)</p>
-                              <div className="priceBox">
-                                  <span>99,999</span>
-                                  <span>元/月</span>
-                              </div>
-                           </div>
-                         </a>
-                      </Col>
-                      <Col span={8}>
-                         <a href="#" className="houseInfoBox">
-                           <div className="prevImg">
-                              <img src={HousePrev}  alt="prev"/>
-                           </div>
-                           <div className="houseInfo">
-                              <p>台北車站【五星飯店式】獨棟電梯~獨立套房</p>
-                              <div className="priceBox">
-                                  <span>99,999</span>
-                                  <span>元/月</span>
-                              </div>
-                           </div>
-                         </a>
-                      </Col>
+                            </Col>
+                           )
+                         })
+                      }
                     </Row>
                 </div>
              </Col>

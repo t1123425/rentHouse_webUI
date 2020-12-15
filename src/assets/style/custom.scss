@@ -1,5 +1,5 @@
 body,html{
-  font-family: Noto Sans TC;
+  font-family: 'Noto Sans TC', sans-serif;
   font-style: normal;
 }
 img{
@@ -15,9 +15,11 @@ img{
     }
 
     .mapWrap{
-      width: 100%;
-      height:100vh;
-      min-height: 500px;
+      position: fixed;
+      width: 50%;
+      height:100%;
+      top:0;
+      right:0;
     }
       
   }
@@ -26,7 +28,7 @@ img{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+  position: fixed;
   padding: 0 28px;
   top:0;
   left: 0px;
@@ -62,10 +64,11 @@ img{
   .houseInfoBox{
      display: block;
      p{
-       margin-bottom:8px;
+       margin:8px auto;
        font-size: 18px;
        line-height: 26px;
-       color:#000
+       color:#000;
+       font-weight: bold;
      }
      .prevImg{
        position: relative;
