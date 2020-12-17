@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect} from 'react';
 import {Row, Button, Menu, Dropdown,Col,Space} from 'antd';
 import Header from '../../component/header';
 import Map from '../../component/map';
@@ -54,35 +54,35 @@ const mockHouseList:houseData[] = [
 ]
 
 
-const handleDropDown = (e:any,type:String) => {
-  console.log('e',e);
-  console.log('type',type);
-}
-
-const dropDownList = (list:String[],type:String) => {
-    return (
-      <Menu onClick={(e)=>{handleDropDown(e,type)}}>
-         {
-           list.map((e,i)=>{
-             return (
-               <Menu.Item key={i}>
-                 {e}
-               </Menu.Item>
-             )
-           })
-         }
-      </Menu>
-    )
-}
-
-
 function Home() {
     // console.log(process.env.PUBLIC_URL);
   const [location, setLocation] = useState({
     city:'台北市',
     area:'大同區'
   });
+  const handleDropDown = (e:any,typed:string) => {
+    let selectIitem = e.item.props.children[1];
+    setLocation({...location,[typed]:selectIitem})
+  }
   
+  const dropDownList = (list:String[],type:string) => {
+      return (
+        <Menu onClick={(e)=>{handleDropDown(e,type)}}>
+           {
+             list.map((e,i)=>{
+               return (
+                 <Menu.Item key={i}>
+                   {e}
+                 </Menu.Item>
+               )
+             })
+           }
+        </Menu>
+      )
+  }
+  useEffect(()=>{
+    console.log('location',location);
+  },[location])
   return (
     <div className="Home">
       < Header />
