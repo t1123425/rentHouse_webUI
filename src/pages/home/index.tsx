@@ -1,6 +1,7 @@
 import React, { useState,useEffect} from 'react';
 import {Row, Button, Menu, Dropdown,Col,Space} from 'antd';
 import Header from '../../component/header';
+import SideBar from '../../component/sidebar';
 import Map from '../../component/map';
 import HousePrev from '../../assets/img/houseDemo.jpeg'
 import { CaretDownOutlined} from '@ant-design/icons';
@@ -86,6 +87,7 @@ function Home() {
   return (
     <div className="Home">
       < Header />
+      <SideBar />
       <div className="mainContent">
            <Row>
              <Col span={12} className="houseListWrap">

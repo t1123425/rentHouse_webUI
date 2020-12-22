@@ -2,6 +2,9 @@ body,html{
   font-family: 'Noto Sans TC', sans-serif;
   font-style: normal;
 }
+ul,ol{
+  list-style: none;
+}
 img{
   width: 100%;
 }
@@ -22,7 +25,7 @@ img{
       right:0;
     }
       
-  }
+}
 .headerMenu{
   min-height: 80px;
   display: flex;
@@ -54,6 +57,22 @@ img{
   // display: flex;
   // flex-direction: row;
 }
+.userInfoBar{
+  position: fixed;
+  min-width: 493px;
+  height: 100vh;
+  top:80px;
+  right:0;
+  z-index: 5;
+  background: #FFFFFF;
+  box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.1);
+
+}
+.prevImg{
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
 .houseListContent{
   margin-top: 63px;
   .title{
@@ -69,11 +88,6 @@ img{
        line-height: 26px;
        color:#000;
        font-weight: bold;
-     }
-     .prevImg{
-       position: relative;
-       overflow: hidden;
-       border-radius: 4px;
      }
      .priceBox{
        text-align: right;
