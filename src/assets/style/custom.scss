@@ -57,6 +57,11 @@ img{
   // display: flex;
   // flex-direction: row;
 }
+.prevImg{
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
 .userInfoBar{
   position: fixed;
   min-width: 493px;
@@ -66,12 +71,10 @@ img{
   z-index: 5;
   background: #FFFFFF;
   box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.1);
+  .userInfo{
+     margin-top: 80px;
+  }
 
-}
-.prevImg{
-  position: relative;
-  overflow: hidden;
-  border-radius: 4px;
 }
 .houseListContent{
   margin-top: 63px;
@@ -102,5 +105,29 @@ img{
      }
   }
 }
+.houseInfoContent{
+  padding: 24px 16px;
   
-  
+  .prevImgWrap{
+    max-width: 101px;
+  }
+  .infoWrap{
+    max-width: 360px; 
+    margin-left: 16px;
+  }
+  .info{
+    font-size:18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+   
+
+  }
+  .price{
+    font-size:16px;
+    font-weight: 900;
+    color:#00C3FF;
+  }
+}

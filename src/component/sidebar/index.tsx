@@ -22,23 +22,23 @@ const SideBar = () => {
     return (
         <aside className="userInfoBar">
             <div className="userInfo">
-                <Avatar src={AvatarSrc} />
+                <Avatar size={80} src={AvatarSrc} />
                 <h1 className="name">Red</h1>
                 <h2 className="rare">87 個評分</h2>
             </div>
             <div className="houseInfoContent">
-                <Row justify="space-around" align="middle">
-                        <Col span={8} className="prevImg">
+                    <Row justify="start" align="middle">
+                        <Col span={4} className="prevImg">
                           <img src={HousePrev} alt="prevImg" />
                         </Col>
-                        <Col span={16} className="textLeft">
-                           <h2>
+                        <Col span={20} className="textLeft infoWrap">
+                           <h2 className="info">
                                 迪化商圈歸綏街3+1房(入籍.家具可談) 第二行的標題如果有的話
                            </h2>
-                           <p>$99,999</p>
+                           <p className="price">$99,999</p>
                         </Col>
                     </Row>
-                    <Row className="textLeft">
+                    <Row className="textLeft" justify="start" align="middle">
                         <Col span={6}>
                             <p>環境噪音</p>
                             <Rate allowHalf defaultValue={2.5} />
