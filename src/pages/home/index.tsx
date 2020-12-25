@@ -5,6 +5,7 @@ import SideBar from '../../component/sidebar';
 import Map from '../../component/map';
 import HousePrev from '../../assets/img/houseDemo.jpeg'
 import { CaretDownOutlined} from '@ant-design/icons';
+import { MenuToggleProvider} from '../../context/mainContext';
 
 interface houseData {
   price?:Number,
@@ -86,70 +87,72 @@ function Home() {
   },[location])
   return (
     <div className="Home">
-      < Header />
-      <SideBar />
-      <div className="mainContent">
-           <Row>
-             <Col span={12} className="houseListWrap">
-                <div className="filterContent textLeft">
-                  <Space className="locationFilter">
-                      <Dropdown overlay={dropDownList(['台北市','新北市'],'city')}>
-                          <h1>
-                            {location.city}
-                            <CaretDownOutlined style={{fontSize:16,marginLeft:8}} />
-                          </h1>
-                      </Dropdown>
-                      <Dropdown overlay={dropDownList(['大同區','信義區'],'area')}>
-                          <h1>
-                          {location.area}
-                            <CaretDownOutlined style={{fontSize:16,marginLeft:8}} />
-                          </h1>
-                      </Dropdown>
-                  </Space>
-                   {/* <div className="locationFilter">
-                   </div> */}
-                   <div className="priceAndEvaluate">
-                    <Button shape="round">
-                      價格
-                    </Button>
-                    <Button shape="round" style={{marginLeft:24}}>
-                      區域評價
-                    </Button>
-                   </div>
-                </div>
-                <div className="houseListContent textLeft">
-                    <h2 className="title">
-                      共找到 678 間房屋
-                    </h2>
-                    <Row gutter={[16, 16]}>
-                      {
-                         mockHouseList.map((e,i)=>{
-                           return (
-                            <Col span={8} key={i}>
-                              <div className="houseInfoBox">
-                                <div className="prevImg">
-                                  <img src={HousePrev}  alt="prev"/>
-                                </div>
-                                <div className="houseInfo">
-                                  <p>{e.info}</p>
-                                  <div className="priceBox">
-                                      <span>{e.price}</span>
-                                      <span>元/月</span>
+       <MenuToggleProvider>
+       < Header />
+        <SideBar />
+        <div className="mainContent">
+            <Row>
+              <Col span={12} className="houseListWrap">
+                  <div className="filterContent textLeft">
+                    <Space className="locationFilter">
+                        <Dropdown overlay={dropDownList(['台北市','新北市'],'city')}>
+                            <h1>
+                              {location.city}
+                              <CaretDownOutlined style={{fontSize:16,marginLeft:8}} />
+                            </h1>
+                        </Dropdown>
+                        <Dropdown overlay={dropDownList(['大同區','信義區'],'area')}>
+                            <h1>
+                            {location.area}
+                              <CaretDownOutlined style={{fontSize:16,marginLeft:8}} />
+                            </h1>
+                        </Dropdown>
+                    </Space>
+                    {/* <div className="locationFilter">
+                    </div> */}
+                    <div className="priceAndEvaluate">
+                      <Button shape="round">
+                        價格
+                      </Button>
+                      <Button shape="round" style={{marginLeft:24}}>
+                        區域評價
+                      </Button>
+                    </div>
+                  </div>
+                  <div className="houseListContent textLeft">
+                      <h2 className="title">
+                        共找到 678 間房屋
+                      </h2>
+                      <Row gutter={[16, 16]}>
+                        {
+                          mockHouseList.map((e,i)=>{
+                            return (
+                              <Col span={8} key={i}>
+                                <div className="houseInfoBox">
+                                  <div className="prevImg">
+                                    <img src={HousePrev}  alt="prev"/>
+                                  </div>
+                                  <div className="houseInfo">
+                                    <p>{e.info}</p>
+                                    <div className="priceBox">
+                                        <span>{e.price}</span>
+                                        <span>元/月</span>
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                            </Col>
-                           )
-                         })
-                      }
-                    </Row>
-                </div>
-             </Col>
-             <Col span={12}>
-                <Map />  
-             </Col> 
-           </Row>
-      </div>
+                              </Col>
+                            )
+                          })
+                        }
+                      </Row>
+                  </div>
+              </Col>
+              <Col span={12}>
+                  <Map />  
+              </Col> 
+            </Row>
+        </div>
+      </MenuToggleProvider>
     </div>
   );
 }
