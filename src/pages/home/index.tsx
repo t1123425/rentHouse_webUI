@@ -2,6 +2,7 @@ import React, { useState,useEffect} from 'react';
 import {Row, Button, Menu, Dropdown,Col,Space} from 'antd';
 import Header from '../../component/header';
 import SideBar from '../../component/sidebar';
+import ModalWithBtn from '../../component/modal/modalwithbtn';
 import Map from '../../component/map';
 import HousePrev from '../../assets/img/houseDemo.jpeg'
 import { CaretDownOutlined} from '@ant-design/icons';
@@ -111,9 +112,10 @@ function Home() {
                     {/* <div className="locationFilter">
                     </div> */}
                     <div className="priceAndEvaluate">
-                      <Button shape="round">
+                      {/* <Button shape="round">
                         價格
-                      </Button>
+                      </Button> */}
+                      <ModalWithBtn btnName={'價格'} />
                       <Button shape="round" style={{marginLeft:24}}>
                         區域評價
                       </Button>
