@@ -176,12 +176,16 @@ img{
     position: absolute;
     left: 0;
     z-index: 2;
-    margin-top: 16px;
+    margin-top: 14px;
+    &.hide{
+      display: none;
+    }
   }
   .priceRangeInputContent{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 24px;
     .price_dash{
       display: inline-block;
       width: 24px;
@@ -205,4 +209,9 @@ img{
       }
     }
   }
+  .modalFooter{
+    padding-top: 16px;
+    border-top: 1px solid #CCCCCC;
+  }
+
 }
